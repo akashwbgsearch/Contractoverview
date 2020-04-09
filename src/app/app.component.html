@@ -1,0 +1,5 @@
+<div class="ajax-div" *ngIf="loading">    
+    <img src="{{imagePath}}" class="ajax-loader" alt="Loading"/>
+</div>
+<contractor-details [apiResponse]="apiResponse" [locale]="locale" [projectsPath]="projectsPath" [procurementPath]="procurementPath"></contractor-details>
+

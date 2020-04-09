@@ -1,0 +1,93 @@
+<div class="row full-row-gray-components" style="padding: 32px 0px 32px 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <div class="detail-download-section">
+                    <div class="header-detail">
+                        <h4>{{detailsLabel}}</h4>
+                    </div>
+                    <div class="main-detail">
+                        <ul class="row">
+                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                <label>{{projectIdLabel}}</label>
+                                <p class="document-info"><a href="{{projectsPath}}{{projectId}}">{{projectId}}</a></p>
+                            </li>
+                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                <label>{{projectTitleLabel}}</label>
+                                <p class="document-info">{{projectTitle}}</p>
+                            </li>
+                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                <label>{{contractNoLabel}}</label>
+                                <p class="document-info">{{contractNo}}</p>
+                            </li>
+                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                <label>{{procurementGroupLabel}}</label>
+                                <p class="document-info">{{procurementGroup}}</p>
+                            </li>
+                        </ul>
+                        <ul class="row">
+                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                <label>{{countryLabel}}</label>
+                                <p class="document-info">{{countryName}}</p>
+                            </li>
+                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                <label>{{noObjectionDateLabel}}</label>
+                                <p class="document-info">{{noObjectionDate}}</p>
+                            </li>
+                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                <label>{{teamLeaderLabel}}</label>
+                                <p class="document-info">{{teamLeader}}</p>
+                            </li>
+                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                <label>{{procurementMethodLabel}}</label>
+                                <p class="document-info">{{procurementMethod}}</p>
+                            </li>
+                        </ul>
+                        <ul class="row">
+                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                <label>{{borrowerContractReferenceLabel}}</label>
+                                <p class="document-info">{{borrowerContractReference}}</p>
+                            </li>
+                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                <label>{{signingDateLabel}}</label>
+                                <p class="document-info">{{signingDate}}</p>
+                            </li>
+                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                <label>{{totalContractAmountLabel}}</label>
+                                <p class="document-info">{{totalContractAmount}}</p>
+                            </li>
+                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                <label>{{procurementTypeLabel}}</label>
+                                <p class="document-info">{{procurementType}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row full-row-white-components" style="padding: 16px 0px 16px 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12 col-sm-12">
+                <div class="c14v1-body c14v1-body-text responsive-table project-opt-table">
+                    <div class="paragraph table nosort">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="responsive">
+                        <tbody>
+                            <tr>
+                                <th>{{contractorNameLabel}}</th>
+                                <th>{{contractorCountryLabel}}</th>
+                            </tr>
+                            <tr *ngFor="let supplier of supplierInfo">
+                                <td><a href="{{procurementPath}}supp_id={{supplier.id}}&supp_name={{supplier.name}}&srce=contracts">{{supplier.name}}</a></td>
+                                <td>{{supplier.countryshortname}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
